@@ -1,0 +1,1191 @@
+/*------font styles-----*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600&display=swap');
+/*font-family: 'League Spartan', sans-serif;*/
+
+/*------global styles-----*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline:none;
+    font-family: 'League Spartan', sans-serif;
+    scroll-behavior: smooth;
+    /*transition:.3s ease;*/
+    color: rgb(15, 20, 15);
+}
+body {
+    width: 100%;
+    color: rgb(15, 20, 15);
+    background-color: rgb(197, 226, 197);
+}
+button{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    color: rgb(15, 20, 15);
+    background-color: rgb(122, 156, 122);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .2s;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 3.125rem;
+    line-height: 4rem;
+}
+h2 {
+    font-size: 2.875rem;
+    line-height: 3.375rem;
+}
+h4{
+    font-size: 1.25rem;
+}
+h6 {
+    font-size: .75rem;
+    font-weight: 700;
+}
+p{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem 0 1.25rem 0;
+}
+.section-p1 {
+    padding: 2.5rem 5rem;
+}
+.section-m1 {
+    margin: 2.5rem 0;
+}
+.pt {
+    padding-top: 1rem;
+}
+.pb {
+    padding-bottom: 1rem;
+}
+
+
+/***************HOME PAGE******************/
+
+/*------header styles-----*/
+#header{
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 5rem;
+    justify-content: space-between;
+    background: rgb(197, 226, 197);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.06);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    padding: 0 1.25rem;
+    position: relative;
+}
+
+#navbar li a,
+#navbar li a i {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0d0c0e;
+    transition: .3 ease;
+}
+
+#navbar li a i:hover,
+#navbar li a i.active,
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(9, 175, 9);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after,
+#navbar li a i.active::after,
+#navbar li a i:hover::after {
+    content: "";
+    width: 40%;
+    height: .125rem;
+    background: rgb(9, 175, 9);
+    position: absolute;
+    bottom: -.25rem;
+    left: 1.25rem;
+}
+
+#header .mobile {
+    display: none;
+    align-items: center;
+}
+#navbar #close {
+    display: none;
+}
+
+/*------hero styles-----*/
+#hero {
+    background-image: url("/assets/image/p1.png"); /*put a photot here*/
+    background-size: cover;
+    background-position: top 30% right 30%;
+    transition: .5s ease-in;
+    height: 90vh;
+    width: 100%;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4 {
+    padding-bottom: 1rem;
+}
+
+#hero h1 {
+    color: rgb(9, 175, 78);
+}
+
+#hero button {
+    background-color: transparent;
+    color: rgb(9, 175, 78);
+    padding: 1rem 3rem 1rem 3rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    outline: 1px solid rgb(122, 156, 122);
+
+}
+#hero button:hover {
+    background-color: rgb(134, 196, 134);
+    color: rgb(32, 58, 32);
+}
+
+/*------features styles-----*/
+#features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#features .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(122, 156, 122);
+    margin: 15px 0;
+    box-shadow: 1.25rem 1.25rem 2rem rgb(122, 156, 122);
+}
+
+#features .fe-box:hover {
+    box-shadow: .51rem .51rem 2rem rgb(100, 122, 100);
+}
+
+#features .fe-box img {
+    width: 100%; /*this feature makes the feature boxes different sizes, work on it*/
+    margin-bottom: 10px;
+}
+
+#features .fe-box h6 {
+    padding: 9px 8px 6px 8px;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 0.25rem;
+    color: rgb(15, 20, 15);
+    background-color: rgb(9, 175, 78);
+}
+#features .fe-box:nth-child(2) h6 {
+    background-color: rgb(9, 175, 78);
+}
+#features .fe-box:nth-child(3) h6 {
+    background-color: rgb(9, 175, 78);
+}
+#features .fe-box:nth-child(4) h6 {
+    background-color: rgb(9, 175, 78);
+}
+#features .fe-box:nth-child(5) h6 {
+    background-color: rgb(9, 175, 78);
+}
+#features .fe-box:nth-child(6) h6 {
+    background-color: rgb(9, 175, 78);
+}
+
+/*------products styles-----*/
+#product1 {
+    text-align: center;
+}
+#product1 .pro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(122, 156, 122);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 1.25rem 1.25rem 1.9rem rgba(15, 20, 15, 0.02);
+    margin: 1rem 0;
+    transition: .2s ease;
+   /* position: relative; /************😭😭😭😭😭this one makes the product cards overlap the header...whyyyyyy**********/
+}
+#product1 .pro:hover {
+    box-shadow: 1.25rem 1.25rem 1.9rem rgba(15, 20, 15, 0.06);
+}
+
+#product1 .pro img.product1 {
+    width: 100%;
+    border-radius: 1.25rem;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    color: rgb(72, 133, 72);
+    font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+    padding: 7px 0;
+    color: rgb(15, 20, 15);
+    font-size: 14px;
+}
+#product1 .pro .des h4 {
+    display: flex;
+    justify-content: space-between;
+}
+#product1 .pro .des h4 span {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(9, 175, 84);
+}
+
+#product1 .pro a i {
+    background-color: rgb(147, 197, 147);
+    border: 1px solid rgb(100, 122, 100);
+    color: rgb(32, 58, 32);
+    border-radius: 2rem;
+    font-weight: 700;
+    padding: 6px;
+    /*position: absolute; /*--------------this makes the part overlap the header-------------------*/
+    bottom: 20px;
+    right: 10px;
+}
+#product1 .pro a i:hover {
+    background-color: rgb(74, 134, 74);
+    color: rgb(197, 226, 197);
+    font-weight: 300;
+}
+
+/*------sale products styles-----*/
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+    /**background-image: url("/assets/sample6.jpg");**/
+    background-color: rgb(122, 156, 122);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner h4 {
+    color: #ffffff;
+    font-size: 1rem;
+}
+#banner h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 10px 0;
+}
+#banner h2 span {
+    color: rgb(236, 214, 11);
+    font-size: 2rem;
+    padding: 10px 0;
+    font-weight: 700;
+}
+#banner button {
+    border: 1px solid rgb(32, 58, 32);
+}
+#banner button:hover {
+    border: 1px solid rgb(197, 226, 197);
+    background: rgb(197, 226, 197);
+    color: rgb(32, 58, 32);
+}
+
+/*------small banner box styles-----*/
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    text-align: start;
+    background-color: rgb(122, 156, 122);
+    background-image: url("/assets/image/p1.png");
+    min-width: 580px;
+    height: 50vh;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+}
+#sm-banner .banner-box2 {
+    background-color: rgb(122, 156, 122);
+    background-image: url("/assets/image/p8.png");
+}
+
+#sm-banner h4 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#sm-banner h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+#sm-banner .banner-box button {
+    padding: 11px 18px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    transition: 0.2s;
+}
+
+#sm-banner .banner-box:hover button {
+    background: rgb(134, 196, 134);
+    border: 1px solid rgb(134, 196, 134);
+}
+
+/*-------------text banner styles----------*/
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5rem;
+}
+
+#banner3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    text-align: start;
+    background-image: url("/assets/image/p13.jpeg");
+    min-width: 30%;
+    height: 30vh;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner3 .banner-box2 {
+    background-image: url("/assets/image/p14.jpeg");
+}
+#banner3 .banner-box3 {
+    background-image: url("/assets/image/p15.jpeg");
+}
+
+#banner3 h2 {
+    color: rgb(197, 226, 197);
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h3 {
+    color: rgb(134, 196, 134);
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/*-------------news letter banner styles----------*/
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("/assets/");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: rgb(100, 122, 100);
+}
+
+#newsletter .newstext h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#newsletter .newstext p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(197, 226, 197);
+}
+
+#newsletter .newstext p span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(236, 214, 11);
+}
+
+#newsletter .newsform {
+    display: flex;
+    width: 40%;
+}
+
+#newsletter .newsform input {
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter .newsform button {
+    background-color: rgb(134, 196, 134);
+    color: rgb(32, 58, 32);
+    white-space: nowrap;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/*-------------footer styles----------*/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+footer .col .logo {
+    margin-bottom: 2rem;
+}
+
+footer .col h4 {
+    font-size: 1rem;
+    padding-bottom: 1.25rem;
+}
+
+footer .col p, strong {
+    font-size: 1rem;
+    margin: 0 0 8px 0;
+}
+
+footer .col a {
+    font-size: 1rem;
+    color: rgb(15, 20, 15);
+    margin-bottom: 10px;
+}
+
+footer .col .followlinks {
+    margin-top: 20px;
+}
+
+footer .col .followlinks i {
+    color: rgb(32, 58, 32);
+    padding-right: 4px;
+}
+
+footer .install .row i {
+    border: 1px solid rgb(32, 58, 32);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    width: 3rem;
+}
+
+footer a:hover,
+footer i:hover,
+footer .col .followlinks i:hover {
+    color: rgb(9, 175, 9);
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+/***************SHOP PAGE******************/
+
+/*------header styles-----*/
+#page-header {
+    background-image: url("/assets/image/p4.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+#page-header h2,
+#page-header p {
+    color: rgb(15, 20, 15);
+}
+
+#paging {
+    text-align: center;
+}
+#paging a {
+    font-size: 17px;
+    font-weight: bold;
+    background-color: rgb(100, 122, 100);
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: rgb(197, 226, 197);
+}
+#paging i {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(197, 226, 197);
+}
+
+/***************SINGLE PRODUCT PAGE******************/
+#product-details {
+    display: flex;
+    margin-top: 20px;
+}
+
+#product-details .single-product-image {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-image-group {
+    display: flex;
+    justify-content: space-between;
+}
+.small-image-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#product-details .single-product-details {
+    width: 50%;
+    padding-top: 30px;
+}
+#product-details .single-product-details h4 {
+    padding: 40px 0 20px 0;
+}
+#product-details .single-product-details h2 {
+    font-size: 26px;
+}
+#product-details .single-product-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background-color: rgb(234, 248, 234);
+}
+#product-details .single-product-details input {
+    width:  50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: rgb(234, 248, 234);
+}
+#product-details .single-product-details button {
+    color: rgb(255, 255, 255);
+}
+#product-details .single-product-details span {
+    line-height: 25px;
+}
+
+
+/***************BLOG PAGE******************/
+/*------header styles-----*/
+#page-header.blog-header {
+    background-image: url("/assets/image/p11.jpeg") !important;
+}
+
+/*-------blog styles-------*/
+#blog {
+    padding: 150px 150px 0 150px;
+}
+#blog .blog-box {
+    position: relative; /*----------------------this styling makes it overlap with the header-------*/
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 90px;
+}
+#blog .blog-img {
+    width: 50%;
+    margin-right: 40px;
+}
+#blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+#blog .blog-info {
+    width: 50%;
+}
+#blog .blog-info a {
+    font-size: 11px;
+    color: rgb(15, 20, 15);
+    font-weight: 700;
+    border: 1px solid transparent;
+    padding: 6px 6px 4px 6px;
+    transition: 0.3s;
+}
+#blog .blog-info a:hover {
+    border: 1px solid rgb(100, 122, 100);
+    color: rgb(100, 122, 100);
+    padding: 6px 6px 4px 6px;
+    border-radius: 3px;
+}
+#blog .blog-box h1 {
+    position: absolute;/*----------------------this styling makes it overlap with the header-------*/
+    z-index: -9;
+    top: -40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: rgb(122, 156, 122);
+}
+
+/***************ABOUT PAGE******************/
+
+/* header */
+#page-header.about-header {
+    background-image: url("/assets/image/p9.png");
+}
+
+/* about */
+#abouth-head {
+    display: flex;
+    align-items: center;
+}
+
+#abouth-head img {
+    width: 50%;
+    height: auto;
+}
+#abouth-head div {
+    padding-left: 40px;
+}
+/* video */
+#about-app {
+    text-align: center;
+}
+#about-app .video {
+    width: 70%;
+    margin: 30px auto 0 auto;
+}
+#about-app .video video {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+/***************CONTACT PAGE******************/
+/* contact details */
+#contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#contact-details .details {
+    width: 40%;
+}
+#contact-details .details span,
+#form-details form span {
+    font-size: 12px;
+}
+#contact-details .details h2,
+#form-details form h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+#contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+#contact-details .details li {
+    display: flex;
+    padding: 10px 0;
+}
+#contact-details .details li i {
+    font-size: 14px;
+    padding-right: 22px;
+}
+#contact-details .details li p {
+    font-size: 14px;
+    margin: 0;
+}
+#contact-details .map {
+    width: 50%;
+    height: 350px;
+}
+#contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* form */
+#form-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid rgb(147, 197, 147);
+}
+#form-details form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#form-details form input,
+#form-details form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background-color: rgb(223, 247, 223);
+    border: 1px solid rgb(147, 197, 147);
+}
+#form-details form button {
+    width: 30%;
+}
+#form-details form button:hover{
+    color: rgb(223, 247, 223);
+    opacity: .9;
+}
+/* members */
+#form-details .members{
+    margin-right: 100px;
+    margin-top: 70px;
+}
+#form-details .members div {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+#form-details .members div img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+#form-details .members div p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+#form-details .members div p span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+/***************CART PAGE******************/
+#cart {
+    overflow-x: auto;
+}
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img {
+    width: 60px;
+}
+#cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2),
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+    background-color: rgb(223, 247, 223);
+}
+#cart table thead {
+    border: 1px solid rgb(147, 197, 147);
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#cart table tbody tr td {
+    padding-top: 15px;
+}
+#cart table tbody td {
+    font-size: 14px;
+}
+/* Coupon */
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#cart-add #coupon {
+    width: 50%;
+    margin-bottom: 30px;
+}
+#cart-add #coupon h3,
+#total h3 {
+    padding-bottom: 15px;
+}
+#cart-add #coupon input {
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid rgb(122, 156, 122);
+    border-radius: 4px;
+    background-color: inherit;
+}
+#cart-add #coupon button,
+#total button {
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+#cart-add #coupon button:hover,
+#total button:hover{
+    opacity: .8;
+}
+/* totals */
+#total {
+    width: 50%;
+    margin-bottom: 30px;
+    padding: 30px;
+    border: 1px solid rgb(122, 156, 122);
+}
+#total table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#total table td {
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid rgb(122, 156, 122);
+}
+
+/***************MEDIA QUERIES******************/
+
+@media screen and (max-width: 767px) {
+    .section-p1 {
+        padding: 2.5rem 2.5rem;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 200px;
+        background-color: rgba(72, 133, 72, 0.97);
+        box-shadow: 0 40px 60px rgba(15, 20, 15, 0.02);
+        transition:.3s ease all;
+        padding: 80px 0 0 10px;
+    }
+    #navbar.active {
+        right: 0;
+    }
+    #navbar li {
+        margin-bottom: 25px;
+    }
+    #navbar li a:hover,
+    #navbar li a.active,
+    #navbar li a i:hover {
+    color: rgb(209, 198, 48);
+    }
+    #navbar li a.active::after,
+    #navbar li a:hover::after,
+    #navbar li a i.active::after,
+    #navbar li a i:hover::after {
+    content: "";
+    width: 40%;
+    height: .125rem;
+    background: rgb(209, 198, 48);
+    position: absolute;
+    bottom: -.25rem;
+    left: 1.25rem;
+    }
+    #header .mobile {
+        display: flex;
+        align-items: center;
+    }
+    #header .mobile i {
+        color: rgb(15, 20, 15);
+        font-size: 24px;
+        padding-left: 1.25rem;
+    }
+    #navbar #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: rgb(15, 20, 15);
+        font-weight: 700;
+    }
+    #header #lg-bag {
+        display: none;
+    }
+    #hero {
+        background-position: top 30% right 30%;
+        height: 70vh;
+        padding: 0 5rem;
+    }
+    #features {
+        justify-content: center;
+    }
+    #features .fe-box {
+        margin: 1rem 1rem;
+    }
+    #product1 .pro-container {
+        justify-content: center;
+    }
+    #product1 .pro {
+        margin: 1rem;
+    }
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 30vh;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 1rem;
+    }
+    #banner3 {
+        padding: 0 40px;
+    }
+    #banner3 .banner-box {
+        width: 28%;
+    }
+    #newsletter .newsform {
+        display: flex;
+        width: 40%;
+    }
+    #newsletter .newsform {
+        width: 70%;
+    }
+    /* contact */
+    #form-details {
+        padding: 40px;
+    }
+    #form-details form button {
+        width: 50%;
+    }
+    #form-details .members {
+        margin-right: 40px;
+        margin-top: 130px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .section-p1 {
+        padding: 20px;
+    }
+    #header {
+        padding: 10px 30px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    #hero {
+        background-position: 70%;
+        padding: 0 10px;
+    }
+    #features .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+    #features {
+        justify-content: space-between;
+    }
+    #product1 .pro {
+        width: 100%;
+    }
+    #banner {
+        height: 30vh;
+    }
+    #banner h2 {
+        font-size: 1.5rem;
+    }
+    #banner h2 span {
+        font-size: 1.5rem;
+    }
+    #sm-banner .banner-box {
+        height: 40vh;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
+    }
+    #banner3 {
+        padding: 0 20px;
+    }
+    #banner3 .banner-box {
+        width: 100%;
+    }
+    #newsletter {
+        padding: 40px 20px;
+    }
+    #newsletter .newsform {
+        width: 100%;
+    }
+    footer .copyright {
+        text-align: start;
+    }
+
+    /*------single product screen styles-----*/
+    #product-details {
+        display: flex;
+        flex-direction: column;
+    }
+    #product-details .single-product-image {
+        width: 100% !important;
+        margin-right: 0;
+    }
+    #product-details .single-product-details {
+        width: 100% !important;
+    }
+
+    /*------blog page screen styles-----*/
+    #blog {
+        padding: 100px 20px 0 20px;
+    }
+    #blog .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #blog .blog-img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    #blog .blog-info {
+        width: 100%;
+    }
+
+    /*------about page screen styles-----*/
+    #abouth-head {
+        flex-direction: column;
+    }
+    #abouth-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #abouth-head div {
+        padding-left: 0;
+    }
+    #about-app .video {
+        width: 100%;
+    }
+    
+    /* conatct page */
+    #contact-details {
+        flex-direction: column;
+    }
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    #contact-details .map {
+        width: 100%;
+    }
+    #form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+    #form-details form {
+        width: 100%;
+    }
+    #form-details form button {
+        width: auto;
+    }
+    #form-details .members {
+        margin-right: 0;
+        margin-top: 50px;
+    }
+
+    /* Cart page */
+    #cart-add {
+        flex-direction: column;
+    }
+    #cart-add #coupon {
+        width: 100%;
+    }
+    #total {
+        width: 100%;
+        padding: 20px;
+    }
+}
